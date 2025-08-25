@@ -32,6 +32,7 @@ export default function SignIn({}: Props) {
               <TextInput
                 className="border rounded-xl px-3 text-xs"
                 placeholder="Username"
+                secureTextEntry
               />
             </View>
           </View>

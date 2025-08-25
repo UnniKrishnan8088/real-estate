@@ -17,7 +17,7 @@ export default function RootLayout() {
     return null;
   }
 
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   return (
     <Stack>
