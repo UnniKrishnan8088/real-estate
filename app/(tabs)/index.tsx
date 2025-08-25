@@ -3,12 +3,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       <ScrollView
         className="flex-1"
         contentContainerClassName="flex-grow justify-center"
       >
-        <View className="flex flex-1 bg-white ">
+        <View className="flex flex-1 bg-white">
           <View className="flex flex-row items-center justify-between px-7 py-8">
             <View>
               <Text className="text-gray-400 text-[18px]">Let's Find Your</Text>
@@ -24,6 +24,7 @@ export default function HomeScreen() {
               }}
             />
           </View>
+          <Text></Text>
         </View>
       </ScrollView>
     </SafeAreaView>
