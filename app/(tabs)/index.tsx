@@ -1,15 +1,31 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <View className="flex-1 bg-white">
-      <Image source={require("@/assets/images/bg.png")} />
-      <View className="items-center">
-        <Image source={require("@/assets/images/app-logo.jpg")} className="w-[280px] h-[70px] object-cover" />
-        <TouchableOpacity className="mt-8 bg-[#006EFF] w-[280px] rounded-[60px]">
-          <Text className="text-xs font-semibold text-white text-center py-4 ">Get Started</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    <SafeAreaView className="flex-1">
+      <ScrollView
+        className="flex-1"
+        contentContainerClassName="flex-grow justify-center"
+      >
+        <View className="flex flex-1 bg-white ">
+          <View className="flex flex-row items-center justify-between px-7 py-8">
+            <View>
+              <Text className="text-gray-400 text-[18px]">Let's Find Your</Text>
+              <Text className="text-[#122D4D] text-xl font-bold">
+                Favorite Home
+              </Text>
+            </View>
+            <Image
+              className="size-[50px] rounded-full object-cover"
+              resizeMode="cover"
+              source={{
+                uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+              }}
+            />
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
